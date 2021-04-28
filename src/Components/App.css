@@ -140,6 +140,14 @@
   right: 3rem;
   color: initial;
 }
+.footer {
+  position: fixed;
+  bottom: 2rem;
+  right: 3rem;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.5rem;
+}
 @media screen and (max-width: 1250px) {
   .search-box {
     width: 60%;
