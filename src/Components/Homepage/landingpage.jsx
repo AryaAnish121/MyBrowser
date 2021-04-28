@@ -1,23 +1,23 @@
 import React, { useEffect, useState } from "react";
 import FromCompo from "./formCompo";
-import NewsFeed from "./news";
+// import NewsFeed from "./news";
 
 const Landing = () => {
   const [data, setData] = useState([]);
 
-  useEffect(() => {
-    fetch(
-      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API}`
-    )
-      .then((res) => {
-        return res.json();
-      })
-      .then((res) => {
-        setData(res.articles);
-      });
-  }, []);
+  // useEffect(() => {
+  //   fetch(
+  //     `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API}`
+  //   )
+  //     .then((res) => {
+  //       return res.json();
+  //     })
+  //     .then((res) => {
+  //       setData(res.articles);
+  //     });
+  // }, []);
 
-  console.log(data);
+  // console.log(data);
 
   return (
     <div className="main-browser">
