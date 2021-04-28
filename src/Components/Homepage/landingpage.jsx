@@ -17,12 +17,14 @@ const Landing = () => {
       });
   }, []);
 
+  console.log(data);
+
   return (
     <div className="main-browser">
       <FromCompo />
       <div className="news-feeds">
         <div className="news-feeds-inner">
-          {data.map((article, index) => {
+          {/* {data.map((article, index) => {
             return (
               <NewsFeed
                 key={index}
@@ -31,7 +33,7 @@ const Landing = () => {
                 image={article.urlToImage}
               />
             );
-          })}
+          })} */}
         </div>
       </div>
     </div>
