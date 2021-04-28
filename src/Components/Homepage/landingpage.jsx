@@ -3,24 +3,24 @@ import FromCompo from "./formCompo";
 import NewsFeed from "./news";
 
 const Landing = () => {
-  // const [data, setData] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   fetch(
-  //     `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API}`
-  //   )
-  //     .then((res) => {
-  //       return res.json();
-  //     })
-  //     .then((res) => {
-  //       setData(res.articles);
-  //     });
-  // }, []);
+  useEffect(() => {
+    fetch(
+      `https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=${process.env.REACT_APP_NEWS_API}`
+    )
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        setData(res.articles);
+      });
+  }, []);
 
   return (
     <div className="main-browser">
       <FromCompo />
-      {/* <div className="news-feeds">
+      <div className="news-feeds">
         <div className="news-feeds-inner">
           {data.map((article, index) => {
             return (
@@ -33,7 +33,7 @@ const Landing = () => {
             );
           })}
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
